@@ -1,0 +1,33 @@
+body {
+	position: relative;
+	height: 100vh;
+}
+
+.row {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.box {
+    background-color: deeppink;
+    height: 100px;
+    width: 100px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .box {
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
